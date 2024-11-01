@@ -1,1 +1,1 @@
-# Spring API + PostGre
+# Spring API + PostGreSQL
