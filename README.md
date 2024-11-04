@@ -1,34 +1,32 @@
 # Spring API + PostGreSQL 🐘
 
-# Projeto portfolio Workbench MySQL 💾
-
 <img src="./img-project/img-project.png" alt="img-project" />
 
-> Projeto para criação de um banco de dados utilizando a linguagem SQL e realizar operações de manipulação e acesso aos dados
+> Lorem
 
 ## Requisitos 💻
 
 Antes de clonar o projeto e recomendado você ter os seguintes requisitos:
 
--   Necessario ter `MySQL Workbench` instalado
--   Requisito `git` para clonar
+-   Necessario ter `lorem` instalado
+-   Requisito `lorem` para clonar
 -   Sua maquina `Windows, Linux ou Mac`.
--   Conhecimento basico `SQL`
+-   Conhecimento basico `lorem`
 
 ## Tecnologias 🚀
 
 As principais tecnologias e ferramentas utilizadas neste projeto são:
 
--   `SQL`: é uma linguagem de programação que permite gerenciar, consultar e manipular dados em bancos de dados relacionais.
+-   `lorem`: lorem.
 
 ## Como instalar 🚀
 
 Windows, Linux e macOS
 
 ```
-git clone https://github.com/danielBRTanimacao/portfolio-workbench-mysql.git
+git clone lorem
 
-cd portfolio-workbench-mysql
+cd lorem
 ```
 
 ### Contato 📞
