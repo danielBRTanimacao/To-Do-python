@@ -1,28 +1,18 @@
 import flet as ft
 
 def main(page: ft.Page):
-    page.title = "Flet counter example"
-    page.vertical_alignment = ft.MainAxisAlignment.CENTER
+    page.title = "Mobile App"
 
-    txt_number = ft.TextField(value="0", text_align=ft.TextAlign.RIGHT, width=100)
+    def send_btn(e):
+        if not url_txt.value:
+            url_txt.error_text = "Coloque uma URL valida!"
+            page.update()
+        else:
+            page.clean()
+            page.add(ft.Text("Link enviado"))
 
-    def minus_click(e):
-        txt_number.value = str(int(txt_number.value) - 1)
-        page.update()
+    url_txt = ft.TextField(label="Url")
 
-    def plus_click(e):
-        txt_number.value = str(int(txt_number.value) + 1)
-        page.update()
-
-    page.add(
-        ft.Row(
-            [
-                ft.IconButton(ft.icons.REMOVE, on_click=minus_click),
-                txt_number,
-                ft.IconButton(ft.icons.ADD, on_click=plus_click),
-            ],
-            alignment=ft.MainAxisAlignment.CENTER,
-        )
-    )
+    page.add(url_txt, ft.ElevatedButton("Enviar", on_click=send_btn))
 
 ft.app(main)
