@@ -7,15 +7,20 @@ class RegisterForm(UserCreationForm):
 
     username = forms.CharField(
         required=True,
+        widget=forms.TextInput(
+            attrs={
+                'class': 'teste'
+            }
+        ),
         min_length=3,
     )
 
     password1 = forms.CharField(
-        label='Password',
+        label='Senha',
         strip=False,
         widget=forms.PasswordInput(
             attrs={
-                'autocomplete': 'new-password'
+                'autocomplete': 'nova senha'
             }
         ),
         help_text=password_validation.password_validators_help_text_html(),
@@ -23,14 +28,14 @@ class RegisterForm(UserCreationForm):
     )
 
     password2 = forms.CharField(
-        label='Password',
+        label='Confirmar senha',
         strip=False,
         widget=forms.PasswordInput(
             attrs={
-                'autocomplete': 'new-password'
+                'autocomplete': 'nova senha'
             }
         ),
-        help_text='Use the same password as before',
+        help_text='Use a mesma senha anterior',
         required=False,
     )
 

@@ -8,7 +8,8 @@ def index(request):
     return render(request, 'pages/index.html', {'title': 'index'})
 
 def login_view(request):
-    return ...
+    if request.method == "POST":
+        pass
 
 def create_view(request):
     return ...
