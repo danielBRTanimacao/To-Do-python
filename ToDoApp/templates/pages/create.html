@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+    {% if user.is_authenticated %}
+        <a href="{% url "logout" %}">
+            Sair
+        </a>
+    {% else %}
+        <h1>Registrar</h1>
+        <form action="{% url "login" %}" method="post">
+            {% csrf_token %}
+            {% for field in form %}    
+                <div class="py-2">
+                    {{field.as_field_group}}
+                </div>
+            {% endfor %}
+        </form>
+    {% endif %}
+{% endblock content %}
