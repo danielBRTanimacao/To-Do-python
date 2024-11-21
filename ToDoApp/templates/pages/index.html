@@ -1,33 +1,60 @@
 {% extends "base.html" %}
-{% load static %}
+{% load static %} 
 {% block content %}
-    <header>
-        cabeçalho
-    </header>
-    <main>
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticbtntocreatetask">
+    {% include "partials/_header.html" %}
+    <nav class="container">
+        <img src="#" alt="image">
+        <h2>titulo</h2>
+        <h4>titulo menor</h4>
+    </nav>
+    <main class="container">
+        <button
+            type="button"
+            class="btn btn-primary"
+            data-bs-toggle="modal"
+            data-bs-target="#staticbtntocreatetask"
+        >
             Adicionar primeira tarefa!
         </button>
-        <div class="modal fade" id="staticbtntocreatetask" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticbtntocreatetaskLabel" aria-hidden="true">
+        <div
+            class="modal fade"
+            id="staticbtntocreatetask"
+            data-bs-backdrop="static"
+            data-bs-keyboard="false"
+            tabindex="-1"
+            aria-labelledby="staticbtntocreatetaskLabel"
+            aria-hidden="true"
+        >
             <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h1 class="modal-title fs-5" id="staticbtntocreatetaskLabel">Criar tarefa</h1>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1
+                            class="modal-title fs-5"
+                            id="staticbtntocreatetaskLabel"
+                        >
+                            Criar tarefa
+                        </h1>
+                        <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                        ></button>
+                    </div>
+                    <div class="modal-body">
+                        <form action="{% url "index" %}" method="post">
+                            {% csrf_token %}
+                            <div>
+                                <button type="submit" class="btn btn-primary">
+                                    Adicionar
+                                </button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
-                <div class="modal-body">
-                  ...
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                  <button type="button" class="btn btn-primary">Understood</button>
-                </div>
-              </div>
             </div>
         </div>
     </main>
-    <footer>
-        rodape
-    </footer>
+    <footer>rodape</footer>
     <script src="{% static "js/index.js" %}"></script>
 {% endblock content %}
