@@ -1,14 +1,23 @@
-const makeEditable = (element) => {
+const makeEditable = (element, storageKey) => {
+    const cachedValue = localStorage.getItem(storageKey);
+    if (cachedValue) {
+        element.textContent = cachedValue;
+    }
+
     element.addEventListener("click", () => {
         const input = document.createElement("input");
         input.type = "text";
         input.value = element.textContent;
+        if (element.id == "subtitleChange") {
+            input.classList.add("sb-input");
+        }
 
         element.replaceWith(input);
         input.focus();
 
         const save = () => {
             element.textContent = input.value;
+            localStorage.setItem(storageKey, input.value);
             input.replaceWith(element);
         };
 
@@ -24,5 +33,31 @@ const makeEditable = (element) => {
 const h1Handle = document.querySelector("h1#titleChange");
 const h4Handle = document.querySelector("h4#subtitleChange");
 
-makeEditable(h1Handle);
-makeEditable(h4Handle);
+makeEditable(h1Handle, "titleChange");
+makeEditable(h4Handle, "subtitleChange");
+
+function selectImage() {
+    document.getElementById("imageInput").click();
+}
+
+function changeImage(event) {
+    const file = event.target.files[0];
+    if (file) {
+        const reader = new FileReader();
+
+        reader.onload = function (e) {
+            const imageUrl = e.target.result;
+            document.getElementById("imageDisplay").src = imageUrl;
+            localStorage.setItem("cachedImageUrl", imageUrl);
+        };
+
+        reader.readAsDataURL(file);
+    }
+}
+
+window.onload = function () {
+    const cachedImageUrl = localStorage.getItem("cachedImageUrl");
+    if (cachedImageUrl) {
+        document.getElementById("imageDisplay").src = cachedImageUrl;
+    }
+};

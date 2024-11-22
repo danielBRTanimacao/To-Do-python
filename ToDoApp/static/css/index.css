@@ -1,7 +1,25 @@
-.change-text {
+.pointer {
     cursor: pointer;
 }
 
-.input-change-txt {
-    border: none !important;
+.changer-img img {
+    position: relative;
+    top: -42.5px;
+    border-radius: 6px;
+}
+
+.input-change-txt input {
+    border-radius: 0 !important;
+    font-size: calc(1.525rem + 3.3vw);
+}
+
+.sb-input {
+    font-size: calc(1.275rem + 0.3vw) !important;
+}
+
+.input-change-txt input:focus {
+    font-weight: 700;
+    box-shadow: 0 0 0 0 !important;
+    border: 0 none !important;
+    outline: 0 !important;
 }
