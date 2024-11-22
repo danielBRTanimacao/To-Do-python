@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from models import Task
+from ToDoApp.models import Task
 
 # Create your views here.
 def index(request):

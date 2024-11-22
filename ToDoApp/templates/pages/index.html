@@ -63,6 +63,13 @@
                 </div>
             </div>
         </div>
+        <ul>
+            {% for task in tasks %}
+                <li>
+                    {{task}}
+                </li>
+            {% endfor %}
+        </ul>
     </main>
     <footer>rodape</footer>
     <script src="{% static "js/index.js" %}"></script>
