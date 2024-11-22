@@ -1,3 +1,7 @@
 .change-text {
     cursor: pointer;
 }
+
+.input-change-txt {
+    border: none !important;
+}
