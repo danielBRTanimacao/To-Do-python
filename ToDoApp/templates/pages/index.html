@@ -19,7 +19,7 @@
     <main class="container">
         <button
             type="button"
-            class="btn btn-primary"
+            class="btn btn-tasks"
             data-bs-toggle="modal"
             data-bs-target="#staticbtntocreatetask"
         >
@@ -66,7 +66,10 @@
         <ul>
             {% for task in tasks %}
                 <li>
-                    {{task}}
+                    <span>{{task.title}}</span>
+                    <span>{{task.description}}</span>
+                    <span>{{task.status}}</span>
+                    <span>{{task.due_date}}</span>
                 </li>
             {% endfor %}
         </ul>
