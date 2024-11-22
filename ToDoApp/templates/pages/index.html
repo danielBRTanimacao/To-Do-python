@@ -3,16 +3,20 @@
 {% block content %}
     {% include "partials/_header.html" %}
     <nav class="container">
-        <div class="pointer changer-img" onclick="selectImage()">
-            <img id="imageDisplay" width="85" height="85" src="https://fakeimg.pl/85x85/" alt="img">
+        <div class="changer-img">
+            <img class="pointer" id="imageDisplay" width="85" height="85" src="https://fakeimg.pl/85x85/" alt="img" onclick="selectImage()">
         </div>
         <input type="file" id="imageInput" accept="image/*" style="display: none;" onchange="changeImage(event)">
         <div class="input-change-txt">
-            <h1 class="pt-2 display-3 fw-bold pointer" id="titleChange">title</h1>
-            <h4 class="py-3 pointer" id="subtitleChange">change-here</h4>
+            <div class="pt-2">
+                <span class="display-3 fw-bold pointer" id="titleChange">title</span>
+            </div>
+            <div class="pt-2">
+                <span class="pointer fs-4 fw-bold" id="subtitleChange">change-here</span>
+            </div>
         </div>
     </nav>
-    <main class="container bg-sublte">
+    <main class="container">
         <button
             type="button"
             class="btn btn-primary"

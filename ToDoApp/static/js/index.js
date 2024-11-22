@@ -30,8 +30,8 @@ const makeEditable = (element, storageKey) => {
     });
 };
 
-const h1Handle = document.querySelector("h1#titleChange");
-const h4Handle = document.querySelector("h4#subtitleChange");
+const h1Handle = document.querySelector("#titleChange");
+const h4Handle = document.querySelector("#subtitleChange");
 
 makeEditable(h1Handle, "titleChange");
 makeEditable(h4Handle, "subtitleChange");

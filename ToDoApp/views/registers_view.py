@@ -1,14 +1,9 @@
 from django.shortcuts import render, redirect
-from .forms import RegisterForm
+from forms import RegisterForm
 from django.contrib.auth import login, logout
 from django.contrib.auth.forms import AuthenticationForm
 
 # Create your views here.
-def index(request):
-    if request.user.is_anonymous:
-        return redirect('login')
-    return render(request, 'pages/index.html', {'title': 'index'})
-
 def login_view(request):
     form = AuthenticationForm(request)
 
