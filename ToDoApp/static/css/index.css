@@ -3,6 +3,28 @@ ul {
     list-style: none;
 }
 
+li {
+    margin-bottom: 3px;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.alert-date {
+    font-weight: 400;
+    background-color: #e6c229;
+    padding: 0 8px;
+    border-radius: 100%;
+    color: white;
+}
+
+.status {
+    padding: 0 10px;
+    border-radius: 12px;
+    background-color: #1a8fe3;
+}
+
 .btn-tasks {
     padding: 0 !important;
     margin: 20px 0 0;
