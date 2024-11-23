@@ -31,6 +31,7 @@ class TaskForm(forms.ModelForm):
         label='data vencimento',
         widget=forms.DateInput(
             attrs={
+                'type':'date',
                 'class': 'form-control'
             }
         )
