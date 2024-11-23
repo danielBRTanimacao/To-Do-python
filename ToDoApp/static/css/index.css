@@ -4,6 +4,15 @@ ul {
 }
 
 .btn-tasks {
+    padding: 0 !important;
+    margin: 20px 0 0;
+    border-radius: 0 !important;
+}
+
+.btn-tasks:hover {
+    color: gray !important;
+    text-decoration: underline gray;
+    text-underline-offset: 5px;
 }
 
 .pointer {

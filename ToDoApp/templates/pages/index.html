@@ -17,14 +17,26 @@
         </div>
     </nav>
     <main class="container">
-        <button
-            type="button"
-            class="btn btn-tasks"
-            data-bs-toggle="modal"
-            data-bs-target="#staticbtntocreatetask"
-        >
-            Adicionar primeira tarefa!
-        </button>
+        {% if tasks %}
+            <button
+                type="button"
+                class="btn btn-tasks"
+                data-bs-toggle="modal"
+                data-bs-target="#staticbtntocreatetask"
+            >
+                Adicionar tarefa
+            </button>
+        {% else %}
+            <button
+                type="button"
+                class="btn btn-tasks"
+                data-bs-toggle="modal"
+                data-bs-target="#staticbtntocreatetask"
+            >
+                Adicionar primeira tarefa
+            </button>
+
+        {% endif %}
         <div
             class="modal fade"
             id="staticbtntocreatetask"
