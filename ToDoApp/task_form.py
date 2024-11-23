@@ -25,16 +25,15 @@ class TaskForm(forms.ModelForm):
             attrs={
                 'class': 'form-control'
             }
-        ),
+        )
     )
-    due_date = forms.CharField(
+    due_date = forms.DateTimeField(
         label='data vencimento',
-        widget=forms.TextInput(
+        widget=forms.DateInput(
             attrs={
                 'class': 'form-control'
             }
-        ),
-        required=True
+        )
     )
 
     class Meta: 
