@@ -65,6 +65,11 @@
                     <div class="modal-body">
                         <form action="{% url "index" %}" method="post">
                             {% csrf_token %}
+                            {% for field in form %}    
+                                <div class="py-2">
+                                    {{field.as_field_group}}
+                                </div>
+                            {% endfor %}
                             <div>
                                 <button type="submit" class="btn btn-primary">
                                     Adicionar
