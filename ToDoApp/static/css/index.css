@@ -11,12 +11,14 @@ li {
     align-items: center;
 }
 
-.alert-date {
-    font-weight: 400;
-    background-color: #e6c229;
-    padding: 0 8px;
-    border-radius: 100%;
-    color: white;
+.alert-task {
+    color: red;
+    font-weight: bold;
+}
+.alert-icon {
+    color: red;
+    font-size: 1.2rem;
+    margin-left: 5px;
 }
 
 .status {

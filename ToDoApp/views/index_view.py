@@ -7,15 +7,15 @@ def index(request):
     if request.user.is_anonymous:
         return redirect('login')
     
-    tasks = Task.objects.all()
+    tasks = Task.objects.filter(user=request.user)
     form = TaskForm()
 
     if request.method == "POST":
         form = TaskForm(request.POST)
-        
         if form.is_valid():
-            form.user = request.user.id
-            form.save()
+            task = form.save(commit=False)
+            task.user = request.user
+            task.save()
             return redirect('index')
 
     context = {

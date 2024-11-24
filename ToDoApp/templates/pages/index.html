@@ -82,15 +82,10 @@
         </div>
         <ul class="pt-4">
             {% for task in tasks %}
-                <!--#1a8fe3-->
-                <li style="background: #e2e3e5;" class="fw-bold">
-                    <span>{{task.title}}</span>
-                    <span>{{task.description}}</span>
-                    <span class="status">{{task.status}}</span>
-                    <span>
-                        <span class="alert-date">!</span>
-                        {{task.due_date}}
-                    </span>
+                <li style="background:#e2e3e5;" class="task-item" data-due-date="{{ task.due_date }}">
+                    <strong>{{ task.title }}</strong> - {{ task.description }}
+                    <small class="status">{{ task.status }}</small>
+                    <span class="due-date">{{ task.due_date|date:"d/m/Y" }}</span>
                 </li>
             {% endfor %}
         </ul>
