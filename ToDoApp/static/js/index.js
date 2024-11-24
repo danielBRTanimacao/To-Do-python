@@ -63,7 +63,7 @@ window.onload = function () {
 };
 
 document.addEventListener("DOMContentLoaded", function () {
-    const alertThreshold = 3; // Dias antes do vencimento para ativar o alerta
+    const alertThreshold = 3;
     const taskItems = document.querySelectorAll(".task-item");
 
     taskItems.forEach((task) => {
@@ -73,13 +73,11 @@ document.addEventListener("DOMContentLoaded", function () {
         const dueDate = new Date(dueDateString);
         const currentDate = new Date();
         const timeDifference = dueDate - currentDate;
-        const daysDifference = timeDifference / (1000 * 60 * 60 * 24); // Converter milissegundos para dias
+        const daysDifference = timeDifference / (1000 * 60 * 60 * 24);
 
         if (daysDifference <= alertThreshold && daysDifference >= 0) {
-            // Adiciona a classe de alerta
             task.classList.add("alert-task");
 
-            // Opcional: Adiciona um ícone ou mensagem de alerta
             const alertIcon = document.createElement("span");
             alertIcon.textContent = " !";
             alertIcon.classList.add("alert-icon");

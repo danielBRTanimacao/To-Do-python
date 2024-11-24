@@ -83,7 +83,8 @@
         <ul class="pt-4">
             {% for task in tasks %}
                 <li style="background:#e2e3e5;" class="task-item" data-due-date="{{ task.due_date }}">
-                    <strong>{{ task.title }}</strong> - {{ task.description }}
+                    <strong>{{ task.title }}</strong>
+                    <span>{{ task.description }}</span>
                     <small class="status">{{ task.status }}</small>
                     <span class="due-date">{{ task.due_date|date:"d/m/Y" }}</span>
                 </li>
