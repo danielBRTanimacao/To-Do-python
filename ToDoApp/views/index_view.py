@@ -14,6 +14,7 @@ def index(request):
         form = TaskForm(request.POST)
         
         if form.is_valid():
+            form.user = request.user.id
             form.save()
             return redirect('index')
 
