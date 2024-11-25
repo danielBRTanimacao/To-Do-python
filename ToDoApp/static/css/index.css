@@ -12,13 +12,12 @@ li {
 }
 
 .alert-task {
-    color: red;
+    margin: 0 5px;
+    padding: 0 10px;
+    border-radius: 100%;
+    background-color: red;
+    color: white;
     font-weight: bold;
-}
-.alert-icon {
-    color: red;
-    font-size: 1.2rem;
-    margin-left: 5px;
 }
 
 .status {

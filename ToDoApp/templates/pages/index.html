@@ -86,7 +86,14 @@
                     <strong>{{ task.title }}</strong>
                     <span>{{ task.description }}</span>
                     <small class="status">{{ task.status }}</small>
-                    <span class="due-date">{{ task.due_date|date:"d/m/Y" }}</span>
+                    <span class="d-flex due-date">
+                        <span class="d-none alert-task">
+                            !
+                        </span>
+                        <span>
+                            {{ task.due_date|date:"d/m/Y" }}
+                        </span>
+                    </span>
                 </li>
             {% endfor %}
         </ul>
