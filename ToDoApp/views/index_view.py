@@ -1,12 +1,11 @@
 from django.shortcuts import render, redirect, get_object_or_404
+from django.contrib.auth.decorators import login_required
 from ToDoApp.models import Task
 from ToDoApp.task_form import TaskForm
 
 # Create your views here.
+@login_required(login_url='login')
 def index(request):
-    if request.user.is_anonymous:
-        return redirect('login')
-    
     tasks = Task.objects.filter(user=request.user)
     form = TaskForm()
 
@@ -25,6 +24,7 @@ def index(request):
     }
     return render(request, 'pages/index.html', context)
 
+@login_required(login_url='login')
 def task_view(request, name, id):
     task = get_object_or_404(Task, id=id, user=request.user)
     form = TaskForm(instance=task)
