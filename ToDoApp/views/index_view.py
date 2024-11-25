@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from ToDoApp.models import Task
 from ToDoApp.task_form import TaskForm
 
@@ -24,3 +24,11 @@ def index(request):
         'form': form
     }
     return render(request, 'pages/index.html', context)
+
+def task_view(request, name, id):
+    task = get_object_or_404(Task, id=id, user=request.user)
+    context = {
+        'title': f'task de {name}',
+        'task': task
+    }
+    return render(request, 'pages/task.html', context)
