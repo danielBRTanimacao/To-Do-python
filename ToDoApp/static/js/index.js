@@ -64,15 +64,21 @@ window.onload = function () {
 
 function setAlert() {
     const taskItens = document.querySelectorAll("li.task-item");
-    const alertTaskItem = document.querySelectorAll("span.alert-task");
     const date = new Date();
 
     taskItens.forEach((element) => {
-        console.log(element.dataset.dueDate);
+        const dueDate = new Date(element.dataset.dueDate);
+        const alertElement = element.querySelector("span.alert-task");
 
-        alertTaskItem.forEach((e) => {
-            e.classList.remove("d-none");
-        });
+        console.log(date);
+        console.log(element.dataset.dueDate);
+        console.log(alertElement);
+        console.log(dueDate);
+        if (dueDate < date) {
+            alertElement.classList.remove("d-none");
+        } else {
+            alertElement.classList.add("d-none");
+        }
     });
 }
 
