@@ -61,3 +61,19 @@ window.onload = function () {
         document.getElementById("imageDisplay").src = cachedImageUrl;
     }
 };
+
+function setAlert() {
+    const taskItens = document.querySelectorAll("li.task-item");
+    const alertTaskItem = document.querySelectorAll("span.alert-task");
+    const date = new Date();
+
+    taskItens.forEach((element) => {
+        console.log(element.dataset.dueDate);
+
+        alertTaskItem.forEach((e) => {
+            e.classList.remove("d-none");
+        });
+    });
+}
+
+setAlert();
