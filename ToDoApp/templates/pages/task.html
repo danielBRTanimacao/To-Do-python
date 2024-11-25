@@ -1,4 +1,9 @@
 {% extends "base.html" %}
 {% block content %}
+    {% include "partials/_header.html" %}
     <h1>Task especifica</h1>
+    <p>{{task.title}}</p>
+    <p>{{task.description}}</p>
+    <p>{{task.due_date}}</p>
+    <p>{{task.created}}</p>
 {% endblock content %}

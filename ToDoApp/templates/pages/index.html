@@ -83,7 +83,9 @@
         <ul class="pt-4">
             {% for task in tasks %}
                 <li style="background:#e2e3e5;" class="task-item" data-due-date="{{ task.due_date|date:"Y-m-d" }}">
-                    <strong>{{ task.title }}</strong>
+                    <a href="{% url "task" user.username task.id %}">
+                        <strong>{{ task.title }}</strong>
+                    </a>
                     <span>{{ task.description }}</span>
                     <small class="status">{{ task.status }}</small>
                     <span class="d-flex due-date">
