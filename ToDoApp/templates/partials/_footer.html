@@ -1,0 +1,3 @@
+<footer>
+    Rodape
+</footer>
