@@ -11,6 +11,15 @@ li {
     align-items: center;
 }
 
+.link-task {
+    color: #212529;
+    text-decoration: none;
+}
+
+.link-task:hover {
+    color: #464d4d;
+}
+
 .alert-task {
     margin: 0 5px;
     padding: 0 10px;
