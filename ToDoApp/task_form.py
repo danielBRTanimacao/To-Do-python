@@ -13,7 +13,7 @@ class TaskForm(forms.ModelForm):
     )
     description = forms.CharField(
         label='descrição',
-        widget=forms.Textarea(
+        widget=forms.TextInput(
             attrs={
                 'class': 'form-control'
             }

@@ -57,8 +57,7 @@ li {
 }
 
 .input-change-txt input:focus,
-.form-style input,
-.form-style textarea {
+.form-style input {
     font-weight: 700;
     box-shadow: 0 0 0 0 !important;
     border: 0 none !important;
