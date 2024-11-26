@@ -86,20 +86,21 @@
                     <a href="{% url "task" user.username task.id %}">
                         <strong>{{ task.title }}</strong>
                     </a>
-                    <span>{{ task.description }}</span>
-                    <small class="status">{{ task.status }}</small>
-                    <span class="d-flex due-date">
-                        <span class="d-none alert-task">
-                            !
+                    <span class="text-truncate" style="max-width: 100px;">{{ task.description }}</span>
+                    <div class="d-flex">
+                        <small class="status me-3">{{ task.status }}</small>
+                        <span class="d-flex due-date">
+                            <span class="d-none alert-task">
+                                !
+                            </span>
+                            <span>
+                                {{ task.due_date|date:"d/m/Y" }}
+                            </span>
                         </span>
-                        <span>
-                            {{ task.due_date|date:"d/m/Y" }}
-                        </span>
-                    </span>
+                    </div>
                 </li>
             {% endfor %}
         </ul>
     </main>
-    {% include "partials/_footer.html" %}
     <script src="{% static "js/index.js" %}"></script>
 {% endblock content %}
