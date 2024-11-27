@@ -90,7 +90,9 @@
                         <span class="text-truncate ms-5" style="max-width: 300px;">{{ task.description }}</span>
                     </div>
                     <div class="d-flex">
-                        <small class="status me-3">{{ task.status }}</small>
+                        {% if task.status %}
+                            <small class="status me-3">{{ task.status }}</small>
+                        {% endif %}
                         <span class="d-flex due-date">
                             <span class="d-none alert-task">
                                 !

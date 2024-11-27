@@ -6,7 +6,8 @@ class TaskForm(forms.ModelForm):
         label='titulo',
         widget=forms.TextInput(
             attrs={
-                'class': 'form-control'
+                'class': 'form-control',
+                'placeholder': 'titulo...'
             }
         ),
         required=True
@@ -15,17 +16,21 @@ class TaskForm(forms.ModelForm):
         label='descrição',
         widget=forms.TextInput(
             attrs={
-                'class': 'form-control'
+                'class': 'form-control',
+                'placeholder': 'descrição...'
             }
-        )
+        ),
+        required=False
     )
     status = forms.CharField(
         label='status',
         widget=forms.TextInput(
             attrs={
-                'class': 'form-control'
+                'class': 'form-control',
+                'placeholder': 'status...'
             }
-        )
+        ),
+        required=False
     )
     due_date = forms.DateTimeField(
         label='data vencimento',
@@ -34,7 +39,8 @@ class TaskForm(forms.ModelForm):
                 'type':'date',
                 'class': 'form-control'
             }
-        )
+        ),
+        required=False
     )
 
     class Meta: 
