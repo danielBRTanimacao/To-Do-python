@@ -2,7 +2,7 @@
 {% block content %}
     {% include "partials/_header.html" %}
     <main class="container">
-        <h1>Task especifica</h1>
+        <h1 class="pt-5">Task especifica</h1>
         <form action="/" method="post" class="form-style">
             {% csrf_token %}
             {% for field in form %}    
@@ -11,7 +11,7 @@
                     {{ field.errors }}
                 </div>
             {% endfor %}
-            <button type="submit">salvar</button>
+            <button class="btn btn-tasks" type="submit">salvar...</button>
         </form>
     </main>
 {% endblock content %}
