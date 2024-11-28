@@ -29,7 +29,7 @@ def task_view(request, name, id):
     task = get_object_or_404(Task, id=id, user=request.user)
 
     form = TaskForm(instance=task)
-    
+
     if request.method == "POST":
         form = TaskForm(request.POST, instance=task)
         if form.is_valid():
@@ -38,6 +38,13 @@ def task_view(request, name, id):
 
     context = {
         'title': f'task de {name}',
-        'form': form
+        'form': form,
+        'task': task
     }
     return render(request, 'pages/task.html', context)
+
+@login_required(login_url='login')
+def delete_task(request, id):
+    task_delete = get_object_or_404(Task, id=id, user=request.user)
+    task_delete.delete()
+    return redirect('index')

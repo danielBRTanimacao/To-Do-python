@@ -3,6 +3,9 @@
     {% include "partials/_header.html" %}
     <main class="container">
         <h1 class="pt-5">Task especifica</h1>
+        <span>
+            <a href="{% url "delete_task" task.id %}">delete</a>
+        </span>
         <form action="/" method="post" class="form-style">
             {% csrf_token %}
             {% for field in form %}    
