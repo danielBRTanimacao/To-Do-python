@@ -27,10 +27,11 @@ def index(request):
 @login_required(login_url='login')
 def task_view(request, name, id):
     task = get_object_or_404(Task, id=id, user=request.user)
-    form = TaskForm(instance=task)
 
+    form = TaskForm(instance=task)
+    
     if request.method == "POST":
-        form = TaskForm(data=request.POST, instance=task)
+        form = TaskForm(request.POST, instance=task)
         if form.is_valid():
             form.save()
             return redirect('index')
