@@ -1,8 +1,8 @@
 import os
 import sys
-from random import randint
+# from random import randint # OTIONAL
 from pathlib import Path
-from random import choice
+# from random import choice # OPTIONAL
 
 import django
 from django.conf import settings
@@ -27,30 +27,23 @@ if __name__ == '__main__':
 
     fake = faker.Faker('pt_BR') # change language
 
-    STATUS_CHOICE = ['Aguardando', 'Processando', 'Enviado', 'Entregue', 'Cancelado']
+    # STATUS_CHOICE = []
     # If your database requires making choices add the list here OPTIONAL
 
     django_objects = []
 
     for indc in range(NUMBER_OF_OBJECTS):
-        client = fake.profile() # creating client
+        fake_indc = fake.profile() # creating client
 
-        # indices obj
-        name = client['name']
-        product = products[indc]
-        amount = randint(0, 100)
-        total_price = values_products[indc]
-        status = choice(STATUS_CHOICE)
+        # create and add all indc objects here
+        exemple = fake_indc['name']
 
+        # add incice to your object
         django_objects.append(
-            Order(
-                client=name,
-                product=product,
-                amount=amount,
-                total_price=total_price,
-                status=status,
+            Task(
+               title = exemple 
             )
         )
 
     if len(django_objects) > 0:
-        Order.objects.bulk_create(django_objects)
+        Task.objects.bulk_create(django_objects)
