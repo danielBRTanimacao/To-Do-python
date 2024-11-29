@@ -2,9 +2,10 @@
 {% block content %}
     {% include "partials/_header.html" %}
     <main class="container">
-        <h1 class="pt-5">Task especifica</h1>
+        <h1 class="pt-5 hoverdefault">Task especifica</h1>
         <span class="ms-1">
-            <a class="btn btn-tasks" href="{% url "delete_task" task.id %}">delete...</a>
+            <a class="btn btn-tasks" href="{% url "index" %}">voltar...</a>
+            <a class="ms-2 btn btn-tasks" href="{% url "delete_task" task.id %}">delete...</a>
         </span>
         <form method="post" class="form-style">
             {% csrf_token %}

@@ -87,9 +87,9 @@
                         <a class="link-task" href="{% url "task" user.username task.id %}">
                             <strong>{{ task.title }}</strong>
                         </a>
-                        <span class="text-truncate ms-5" style="max-width: 300px;">{{ task.description }}</span>
+                        <span class="text-truncate ms-5 hoverdefault" style="max-width: 300px;">{{ task.description }}</span>
                     </div>
-                    <div class="d-flex">
+                    <div class="d-flex hoverdefault">
                         {% if task.status %}
                             <small class="status me-3">{{ task.status }}</small>
                         {% endif %}
