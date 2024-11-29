@@ -3,7 +3,6 @@ from django.contrib.auth.decorators import login_required
 from ToDoApp.models import Task
 from ToDoApp.task_form import TaskForm
 
-# Create your views here.
 @login_required(login_url='login')
 def index(request):
     tasks = Task.objects.filter(user=request.user)

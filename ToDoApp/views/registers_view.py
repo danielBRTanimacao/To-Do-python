@@ -4,7 +4,6 @@ from django.contrib.auth import login, logout
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import AuthenticationForm
 
-# Create your views here.
 def login_view(request):
     form = AuthenticationForm(request)
 

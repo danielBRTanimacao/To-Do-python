@@ -1,17 +1,17 @@
-# teste
+# To Do App
 
 <img src="./img-project/img-project.png" alt="img-project" />
 
-> Lorem
+> inspirado no Notion
 
 ## Requisitos 💻
 
 Antes de clonar o projeto e recomendado você ter os seguintes requisitos:
 
--   Necessario ter `lorem` instalado
--   Requisito `lorem` para clonar
+-   Necessario ter `python3+` instalado
+-   Requisito `git` para clonar
 -   Sua maquina `Windows, Linux ou Mac`.
--   Conhecimento basico `lorem`
+-   Conhecimento basico `django`
 
 ## Tecnologias 🚀
 

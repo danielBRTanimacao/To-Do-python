@@ -4,6 +4,7 @@
     --light-gray: #464d4d;
     --beauty-red: #ff5243;
 }
+
 .hoverdefault:hover {
     cursor: default;
 }
