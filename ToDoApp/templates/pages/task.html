@@ -3,18 +3,17 @@
     {% include "partials/_header.html" %}
     <main class="container">
         <h1 class="pt-5">Task especifica</h1>
-        <span class="ms-2">
+        <span class="ms-1">
             <a class="btn btn-tasks" href="{% url "delete_task" task.id %}">delete...</a>
         </span>
-        <form action="" method="post" class="form-style">
+        <form method="post" class="form-style">
             {% csrf_token %}
             {% for field in form %}    
                 <div class="py-2">
                     {{field}}
-                    {{ field.errors }}
                 </div>
             {% endfor %}
-            <button class="btn btn-tasks" type="submit">salvar...</button>
+            <button class="ms-1 btn btn-tasks" type="submit">salvar...</button>
         </form>
     </main>
 {% endblock content %}

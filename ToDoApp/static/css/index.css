@@ -1,3 +1,13 @@
+:root {
+    --light-blue: #1a8fe3;
+    --darker-blue: #212529;
+    --light-gray: #464d4d;
+    --beauty-red: #ff5243;
+}
+.hoverdefault:hover {
+    cursor: default;
+}
+
 ul {
     padding: 0 !important;
     list-style: none;
@@ -12,19 +22,19 @@ li {
 }
 
 .link-task {
-    color: #212529;
+    color: var(--darker-blue);
     text-decoration: none;
 }
 
 .link-task:hover {
-    color: #464d4d;
+    color: var(--light-gray);
 }
 
 .alert-task {
     margin: 0 5px;
     padding: 0 10px;
     border-radius: 100%;
-    background-color: #ff5243;
+    background-color: var(--beauty-red);
     color: white;
     font-weight: bold;
 }
@@ -32,7 +42,7 @@ li {
 .status {
     padding: 0 10px;
     border-radius: 12px;
-    background-color: #1a8fe3;
+    background-color: var(--light-blue);
 }
 
 .btn-tasks {
