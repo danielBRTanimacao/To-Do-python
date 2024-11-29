@@ -6,7 +6,7 @@
         <span class="ms-2">
             <a class="btn btn-tasks" href="{% url "delete_task" task.id %}">delete...</a>
         </span>
-        <form action="/" method="post" class="form-style">
+        <form action="" method="post" class="form-style">
             {% csrf_token %}
             {% for field in form %}    
                 <div class="py-2">
