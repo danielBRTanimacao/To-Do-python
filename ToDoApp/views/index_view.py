@@ -1,11 +1,13 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required
+from django.core.paginator import Paginator
 from ToDoApp.models import Task
 from ToDoApp.task_form import TaskForm
 
 @login_required(login_url='login')
 def index(request):
     tasks = Task.objects.filter(user=request.user)
+    paginator = Paginator(tasks, 20)
     form = TaskForm()
 
     if request.method == "POST":
@@ -16,10 +18,13 @@ def index(request):
             task.save()
             return redirect('index')
 
+    page_number = request.GET.get('page')
+    page_obj = paginator.get_page(page_number)
     context = {
         'title': 'index',
         'tasks': tasks,
-        'form': form
+        'form': form,
+        'page_obj': page_obj
     }
     return render(request, 'pages/index.html', context)
 
