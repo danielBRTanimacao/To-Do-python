@@ -5,7 +5,7 @@
         <h1 class="pt-5 hoverdefault fw-bold">Task especifica</h1>
         <span class="ms-1">
             <a class="btn btn-tasks" href="{% url "index" %}">voltar...</a>
-            <a class="ms-2 btn btn-tasks" href="{% url "delete_task" task.id %}">delete...</a>
+            <a class="ms-2 btn btn-tasks-danger" href="{% url "delete_task" task.id %}">deletar...</a>
         </span>
         <form method="post" class="form-style">
             {% csrf_token %}

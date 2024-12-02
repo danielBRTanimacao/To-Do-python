@@ -3,6 +3,7 @@
     --darker-blue: #212529;
     --light-gray: #464d4d;
     --beauty-red: #ff5243;
+    --darker-red: rgb(50, 0, 0);
 }
 
 .hoverdefault:hover {
@@ -46,14 +47,24 @@ li {
     background-color: var(--light-blue);
 }
 
-.btn-tasks {
+.btn-tasks,
+.btn-tasks-danger {
     padding: 0 !important;
     margin: 20px 0 0;
     border-radius: 0 !important;
 }
 
-.btn-tasks:hover {
+.btn-tasks:hover,
+.btn-tasks-danger:hover {
     color: gray !important;
+}
+
+.btn-tasks-danger:hover {
+    color: var(--darker-red) !important;
+}
+
+.btn-tasks-danger {
+    color: var(--beauty-red) !important;
 }
 
 .pointer {
