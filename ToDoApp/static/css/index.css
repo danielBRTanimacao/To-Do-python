@@ -71,6 +71,10 @@ li {
     cursor: pointer;
 }
 
+.li-block {
+    display: flex;
+}
+
 .changer-img img {
     position: relative;
     top: -42.5px;
@@ -93,4 +97,10 @@ li {
     box-shadow: 0 0 0 0 !important;
     border: 0 none !important;
     outline: 0 !important;
+}
+
+@media (max-width: 767.98px) {
+    .li-block {
+        display: block;
+    }
 }

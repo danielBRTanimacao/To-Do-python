@@ -82,7 +82,7 @@
         </div>
         <ul class="pt-4">
             {% for task in page_obj %}
-                <li style="background:#e2e3e5;" class="task-item" data-due-date="{{ task.due_date|date:"Y-m-d" }}">
+                <li style="background:#e2e3e5;" class="task-item li-block" data-due-date="{{ task.due_date|date:"Y-m-d" }}">
                     <div class="d-flex">
                         <a class="link-task" href="{% url "task" user.username task.id %}">
                             <strong>{{ task.title }}</strong>
@@ -105,7 +105,7 @@
                 </li>
             {% endfor %}
         </ul>
-        {% if page_obj.paginator.count >= 10%}
+        {% if page_obj.paginator.count >= 10 %}
             <div class="pagination">
                 <span class="step-links">
                     {% if page_obj.has_previous %}
