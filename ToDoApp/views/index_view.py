@@ -7,7 +7,7 @@ from ToDoApp.task_form import TaskForm
 @login_required(login_url='login')
 def index(request):
     tasks = Task.objects.filter(user=request.user)
-    paginator = Paginator(tasks, 20)
+    paginator = Paginator(tasks, 10)
     form = TaskForm()
 
     if request.method == "POST":
@@ -22,7 +22,6 @@ def index(request):
     page_obj = paginator.get_page(page_number)
     context = {
         'title': 'index',
-        'tasks': tasks,
         'form': form,
         'page_obj': page_obj
     }
