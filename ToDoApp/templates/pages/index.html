@@ -9,10 +9,10 @@
         <input type="file" id="imageInput" accept="image/*" style="display: none;" onchange="changeImage(event)">
         <div class="input-change-txt">
             <div class="pt-2">
-                <span class="display-3 fw-bold pointer" id="titleChange">title</span>
+                <span class="display-3 fw-bold pointer" id="titleChange">titulo</span>
             </div>
             <div class="pt-2">
-                <span class="pointer fs-4 fw-bold" id="subtitleChange">change-here</span>
+                <span class="pointer fs-4 fw-bold" id="subtitleChange">mude aqui</span>
             </div>
         </div>
     </nav>
@@ -67,12 +67,12 @@
                             {% csrf_token %}
                             {% for field in form %}    
                                 <div class="py-2">
-                                    {{field.as_field_group}}
+                                    {{field}}
                                 </div>
                             {% endfor %}
                             <div>
-                                <button type="submit" class="btn btn-primary">
-                                    Adicionar
+                                <button type="submit" class="btn btn-tasks">
+                                    Adicionar...
                                 </button>
                             </div>
                         </form>
