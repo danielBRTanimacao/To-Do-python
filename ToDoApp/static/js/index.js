@@ -70,10 +70,6 @@ function setAlert() {
         const dueDate = new Date(element.dataset.dueDate);
         const alertElement = element.querySelector("span.alert-task");
 
-        console.log(date);
-        console.log(element.dataset.dueDate);
-        console.log(alertElement);
-        console.log(dueDate);
         if (dueDate < date) {
             alertElement.classList.remove("d-none");
         } else {
@@ -83,3 +79,24 @@ function setAlert() {
 }
 
 setAlert();
+
+let clicked = false;
+
+function removeIconImage() {
+    const defaultImage = "https://fakeimg.pl/85x85/";
+
+    if (!clicked) {
+        document.getElementById("imageDisplay").src = defaultImage;
+        clicked = true;
+    } else {
+        document.getElementById("imageDisplay").classList.add("d-none");
+    }
+}
+
+function removeTitle() {
+    document.getElementById("titleChange").innerHTML = "";
+}
+
+function removeSubTitle() {
+    document.getElementById("subtitleChange").innerHTML = "";
+}
