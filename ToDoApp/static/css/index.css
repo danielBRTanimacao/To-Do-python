@@ -120,3 +120,7 @@ li {
         display: block;
     }
 }
+
+.menu {
+    float: right;
+}
