@@ -100,3 +100,27 @@ function removeTitle() {
 function removeSubTitle() {
     document.getElementById("subtitleChange").innerHTML = "";
 }
+
+function addIconImage() {
+    console.log("adicionado");
+}
+
+function addTitle() {
+    document.getElementById("titleChange").innerHTML = "Titulo";
+}
+
+function addSubTitle() {
+    document.getElementById("subtitleChange").innerHTML = "Subtitulo";
+}
+
+let menuClicked = false;
+
+function showMenu() {
+    if (!menuClicked) {
+        document.getElementById("showMenu").classList.add("d-none");
+        menuClicked = true;
+    } else {
+        document.getElementById("showMenu").classList.remove("d-none");
+        menuClicked = false;
+    }
+}

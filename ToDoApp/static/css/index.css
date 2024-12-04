@@ -123,4 +123,6 @@ li {
 
 .menu {
     float: right;
+    display: flex;
+    flex-direction: column;
 }
