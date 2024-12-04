@@ -1,11 +1,11 @@
 <nav class="menu">
-    <button onclick="showMenu()">menu</button>
+    <button class="btn" onclick="showMenu()">menu</button>
     <div class="d-flex flex-column" id="showMenu">
-        <button id="removeImg" onclick="removeIconImage()">remove img</button>
-        <button id="removeImg" onclick="removeTitle()">remove title</button>
-        <button id="removeImg" onclick="removeSubTitle()">remove subtitle</button>
-        <button id="removeImg" onclick="addIconImage()">add img</button>
-        <button id="removeImg" onclick="addTitle()">add title</button>
-        <button id="removeImg" onclick="addSubTitle()">add subtitle</button>
+        <button class="btn" onclick="removeIconImage()">remove img</button>
+        <button class="btn" onclick="removeSets('titleChange')">remove title</button>
+        <button class="btn" onclick="removeSets('subtitleChange')">remove subtitle</button>
+        <button class="btn" onclick="addIconImage()">add img</button>
+        <button class="btn" onclick="setAdds('titleChange')">add title</button>
+        <button class="btn" onclick="setAdds('subtitleChange')">add subtitle</button>
     </div>
 </nav>

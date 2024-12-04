@@ -93,24 +93,20 @@ function removeIconImage() {
     }
 }
 
-function removeTitle() {
-    document.getElementById("titleChange").innerHTML = "";
-}
-
-function removeSubTitle() {
-    document.getElementById("subtitleChange").innerHTML = "";
-}
-
 function addIconImage() {
     console.log("adicionado");
 }
 
-function addTitle() {
-    document.getElementById("titleChange").innerHTML = "Titulo";
+function removeSets(id) {
+    document.getElementById(id).innerHTML = "";
 }
 
-function addSubTitle() {
-    document.getElementById("subtitleChange").innerHTML = "Subtitulo";
+function setAdds(id) {
+    if (id == "titleChange") {
+        document.getElementById(id).innerHTML = "Titulo";
+    } else {
+        document.getElementById(id).innerHTML = "Subtitulo";
+    }
 }
 
 let menuClicked = false;
@@ -118,9 +114,11 @@ let menuClicked = false;
 function showMenu() {
     if (!menuClicked) {
         document.getElementById("showMenu").classList.add("d-none");
+        document.getElementById("showMenu").classList.remove("animate-top");
         menuClicked = true;
     } else {
         document.getElementById("showMenu").classList.remove("d-none");
+        document.getElementById("showMenu").classList.add("animate-top");
         menuClicked = false;
     }
 }
