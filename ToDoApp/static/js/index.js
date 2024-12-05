@@ -113,12 +113,12 @@ let menuClicked = false;
 
 function showMenu() {
     if (!menuClicked) {
-        document.getElementById("showMenu").classList.add("d-none");
-        document.getElementById("showMenu").classList.remove("animate-top");
-        menuClicked = true;
-    } else {
         document.getElementById("showMenu").classList.remove("d-none");
         document.getElementById("showMenu").classList.add("animate-top");
+        menuClicked = true;
+    } else {
+        document.getElementById("showMenu").classList.add("d-none");
+        document.getElementById("showMenu").classList.remove("animate-top");
         menuClicked = false;
     }
 }
