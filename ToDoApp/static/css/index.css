@@ -129,16 +129,14 @@ li {
 
 @keyframes animatetop {
     0% {
-        transform: translateY(-100px);
-        filter: blur(5px);
+        transform: translateY(-40px);
     }
     100% {
         transform: translateY(0);
-        filter: blur(0);
     }
 }
 
 .animate-top {
-    animation: animatetop 0.5s ease-in-out;
+    animation: animatetop 0.2s ease-in-out;
     transform-origin: top;
 }
