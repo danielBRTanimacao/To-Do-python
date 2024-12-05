@@ -1,9 +1,18 @@
 <nav class="menu">
     <button class="btn" onclick="showMenu()" id="menuBtn">&lt;</button>
     <div class="d-flex flex-column d-none" id="showMenu">
-        <button class="btn" onclick="removeIconImage()">remove img</button>
-        <button class="btn" onclick="removeSets('titleChange')">remove title</button>
-        <button class="btn" onclick="removeSets('subtitleChange')">remove subtitle</button>
+        <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" role="switch" name="icon" id="iconRemove" onclick="removeIconImage()">
+            <label class="form-check-label" for="iconRemove">remove img</label>
+        </div>
+        <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" role="switch" name="title" id="titleRemove" onclick="removeSets('titleChange')">
+            <label class="form-check-label" for="titleRemove">remove title</label>
+        </div>
+        <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" role="switch" name="subtitle" id="subtitleRemove" onclick="removeSets('subtitleChange')">
+            <label class="form-check-label" for="subtitleRemove">remove subtitle</label>
+        </div>
         <button class="btn" onclick="addIconImage()">add img</button>
         <button class="btn" onclick="setAdds('titleChange')">add title</button>
         <button class="btn" onclick="setAdds('subtitleChange')">add subtitle</button>

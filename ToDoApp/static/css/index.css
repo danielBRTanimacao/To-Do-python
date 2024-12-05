@@ -140,3 +140,9 @@ li {
     animation: animatetop 0.2s ease-in-out;
     transform-origin: top;
 }
+
+#menuBtn:hover {
+    font-size: large;
+    font-weight: 800;
+    transition: all 0.3s ease-in-out;
+}
